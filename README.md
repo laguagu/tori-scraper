@@ -4,7 +4,7 @@ Yksinkertainen web scraper Tori.fi:n ilmoitusten hakemiseen. Toteutettu Next.js:
 
 ## Ominaisuudet
 
-- Hakee huonekaluilmoitukset Tori.fi:stä
+- Hakee ilmoitukset Tori.fi:stä
 - Palauttaa ilmoitukset JSON-muodossa (otsikko, hinta, sijainti, kuva, linkki)
 - Käytettävissä joko API-endpointtina tai React-komponenttina
 
