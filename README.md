@@ -1,6 +1,6 @@
-# Tori.fi Huonekalu Scraper
+# Tori.fi Scraper
 
-Yksinkertainen web scraper Tori.fi:n huonekaluilmoitusten hakemiseen. Toteutettu Next.js:llä ja Cheerio:lla.
+Yksinkertainen web scraper Tori.fi:n ilmoitusten hakemiseen. Toteutettu Next.js:llä ja Cheerio:lla.
 
 ## Ominaisuudet
 
