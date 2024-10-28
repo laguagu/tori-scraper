@@ -30,28 +30,31 @@ export async function GET(request: Request) {
     const $ = cheerio.load(html);
 
     const results: Result[] = [];
-    
-    // Korjattu selektori vastaamaan sivun rakennetta
-    $('.sf-result-list article.sf-search-ad').each((i, el) => {
-      const title = $(el).find('h2').text().trim();
-      const priceElement = $(el).find('.font-bold').first();
+
+    $(".sf-result-list article.sf-search-ad").each((i, el) => {
+      const title = $(el).find("h2").text().trim();
+      const priceElement = $(el).find(".font-bold").first();
       const price = priceElement.text().trim();
-      const location = $(el).find('.text-xs.s-text-subtle span').first().text().trim();
-      const imageUrl = $(el).find('img').attr('src');
-      const link = $(el).find('h2 a').attr('href');
-      
+      const location = $(el)
+        .find(".text-xs.s-text-subtle span")
+        .first()
+        .text()
+        .trim();
+      const imageUrl = $(el).find("img").attr("src");
+      const link = $(el).find("h2 a").attr("href");
+
       if (title && link) {
         results.push({
           title,
           price,
           location,
           imageUrl,
-          link: link.startsWith('http') ? link : `https://www.tori.fi${link}`
+          link: link.startsWith("http") ? link : `https://www.tori.fi${link}`,
         });
       }
     });
 
-    console.log('Löydettiin', results.length, 'tulosta');
+    console.log("Löydettiin", results.length, "tulosta");
     return NextResponse.json({ results });
   } catch (error) {
     console.error("Haku epäonnistui:", error);
