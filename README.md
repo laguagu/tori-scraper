@@ -63,7 +63,3 @@ Vastaus on JSON-muodossa:
 ## Huomioitavaa
 
 - API ei tue sivutusta tällä hetkellä
-
-## Lisenssi
-
-MIT
